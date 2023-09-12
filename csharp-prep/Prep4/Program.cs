@@ -40,22 +40,47 @@ class Program
         2. Sort the numbers in the list and display the new, sorted list. Hint: There are C# libraries that can help you
         here, try searching the internet for them.
         */
+
+        // se crea la variable 'positiveNumbers' que almacenará la lista
         List<int> positiveNumbers = new List<int>();
 
+        /* 
+        se crea un ciclo 'foreach'
+        se itera la lista 'numbers' con la variable 'n'
+        */
         foreach (int n in numbers)
         {
+            // si los elementos de la lista 'numbers' tiene números mayores a '0'
             if (n > 0)
             {
+                // se agregará por cada ciclo, cada número mayor a cero (positivo)
+                // que esté en la lista 'numbers' y se agregará a la lista 'positiveNumbers'
                 positiveNumbers.Add(n);
             }
         }
 
+        /* 
+        si a la lista 'positiveNumbers' se le agregaron elementos,
+        es decir, se toma la longitud o tamaño de la lista 'positiveNumbers'
+        para determinar si tiene elementos en ella usando el método 'Count()'
+        si la cantidad de elementos es mayor a '0', entonces la lista no esta vacía
+        y tiene elementos en ella
+        */
         if (positiveNumbers.Count > 0)
         {
+            /* 
+            se imprime el número más pequeño de lista 'positiveNumbers',
+            se llama a la variable 'positiveNumbers' que almacena la lista,  
+            y se usa el método 'Min()' para obtener el elemento más pequeño
+            */
             Console.WriteLine($"The smallest positive number is: {positiveNumbers.Min()}");
         }
         else
         {
+            /* 
+            si la lista 'positiveNumbers' no tiene elementos
+            se imprime el siguiente mensaje
+            */
             Console.WriteLine("There is no smallest positive number.");
         }
 
