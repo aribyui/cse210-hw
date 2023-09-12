@@ -30,7 +30,36 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Letter grade: {letter}");
+        // Stretch Challenge
+        string sign;
+
+        int lastDigit = gradePercentage % 10;
+
+        if (lastDigit >= 7)
+        {
+            sign = "+";
+        }
+        else if (lastDigit < 3)
+        {
+            sign = "-";
+        }
+        else
+        {
+            sign = "";
+        }
+
+        if (gradePercentage >= 93)
+        {
+            sign = "";
+        }
+
+        if (letter == "F")
+        {
+            sign = "";
+        }
+        // Stretch Challenge
+
+        Console.WriteLine($"Letter grade: {letter}{sign}");
 
         if (gradePercentage >= 70)
         {
