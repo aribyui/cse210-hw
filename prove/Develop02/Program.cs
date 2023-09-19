@@ -9,7 +9,7 @@ class Program
         p._prompts.Add("What was the best part of my day?");
         p._prompts.Add("How did I see the hand of the Lord in my life today?");
         p._prompts.Add("What was the strongest emotion I felt today?");
-        p._prompts.Add("If I had one thing I could do over today, what would it be?");
+        p._prompts.Add("If I had one thing I could do over today what would it be?");
 
         Entry entry;
         Journal journal1 = new Journal();
@@ -17,7 +17,7 @@ class Program
 
         int option = 0;
 
-        Console.WriteLine("\nWelcome to the Journal Program!");
+        Console.WriteLine("\nWelcome to the Journal Program!\n");
 
         while (option != 5)
         {
@@ -49,7 +49,7 @@ class Program
             {
                journal1.DisplayEntries();
 
-               // Console.WriteLine(); // blank space
+               Console.WriteLine(); // blank space
             }
             else if (option == 3)
             {
@@ -63,6 +63,11 @@ class Program
 
                 Console.WriteLine(); // blank space
             }
-        }       
+            else
+            {
+                Console.WriteLine("The menu option you typed does not exist, please try again.\n");
+            }
+        }  
+        Console.WriteLine("Thanks for using the Journal Program!\n");     
     }
 }

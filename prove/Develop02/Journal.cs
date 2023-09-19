@@ -1,4 +1,5 @@
 using System.IO;
+using Microsoft.VisualBasic.FileIO;
 public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
@@ -25,7 +26,7 @@ public class Journal
 
         foreach (string line in lines)
         {
-            string[] parts = line.Split("~");
+            string[] parts = line.Split(",");
 
             string date = parts[0];
             string prompt = parts[1];
@@ -49,9 +50,20 @@ public class Journal
         {
             foreach (Entry e in _entries)
             {
+                /*
+                Tuve que implementar el método ToString() a la clase Entry,
+                ya que al momento de guardar el achivo con cada una de las 
+                entradas (entries), aparecían de la siguiente manera:
+
+                Entry 
+                Entry
+
+                esto ocurría porque las entradas heredan de Object, y por eso
+                devolvían el nombre de la clase (Entry), por esta razón no devolvía
+                la representación de las entradas en formato de cadena o string. 
+                */
                 outputFile.WriteLine(e);
-            }            
-                               
+            }                                          
             Console.WriteLine("The file was created.");
         }
     }
