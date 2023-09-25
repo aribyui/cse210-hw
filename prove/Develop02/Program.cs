@@ -27,6 +27,13 @@ class Program
 
             if (option == 1)
             {     
+                /*
+                1. Crear una nueva instancia de random
+                2. Obtener un numero aleatorio teniendo como máximo el numero de elementos de la lista
+                3. Obtener el elemento con la posición aleatoria.
+                Solution: 
+                https://jmartinhc.blogspot.com/2019/11/como-acceder-elemento-random-de-una-lista-en-c-sharp.html
+                */
                 Random r = new Random();
                 int rndIndex = r.Next(p._prompts.Count);
                 string randomPrompt = p._prompts[rndIndex];
