@@ -16,14 +16,9 @@ public class Fraction
     }
 
     public Fraction(int top, int bottom)
-    {
+    {   
         _top = top;
         _bottom = bottom;
-    }
-
-    public int GetTop()
-    {
-        return _top;
     }
 
     public void SetTop(int top)
@@ -31,9 +26,9 @@ public class Fraction
         _top = top;
     }
 
-    public int GetBottom()
+    public int GetTop()
     {
-        return _bottom;
+        return _top;
     }
 
     public void SetBottom(int bottom)
@@ -41,14 +36,18 @@ public class Fraction
         _bottom = bottom;
     }
 
+    public int GetBottom()
+    {
+        return _bottom;
+    }
+
     public string GetFractionString()
     {
         return $"{_top}/{_bottom}";
     }
-
+    
     public double GetDecimalValue()
-    {   
-        return (double)_top / (double)_bottom;
+    {
+        return (double)_top/(double)_bottom;
     }
-
 }
