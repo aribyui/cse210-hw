@@ -5,8 +5,11 @@ public class MathAssingment : Assingment
 
     public MathAssingment(string studentName, string topic, string section, string problems) : base(studentName, topic)
     {
-        _studentName = studentName;
-        _topic = topic;
+        /*
+        las variables _studentName y _topic
+        son heredades de la clase padre 'Assingment'
+        por lo cuál, es redundante volver a asignarlas
+        */
         _section = section;
         _problems = problems;        
     }

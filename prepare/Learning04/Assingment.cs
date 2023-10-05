@@ -1,7 +1,7 @@
 public class Assingment
 {
-    protected string _studentName = "";
-    protected string _topic = "";
+    private string _studentName = "";
+    private string _topic = "";
 
     public Assingment(string studentName, string topic)
     {

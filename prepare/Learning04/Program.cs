@@ -7,7 +7,7 @@ class Program
         Assingment assingment = new Assingment("Samuel Bennett", "Multiplication");
         Console.WriteLine(assingment.GetSummary());
 
-        MathAssingment mathAssingment1 = new MathAssingment("Roberto Rodríguez", "Fractions", "Problems", "8-19");
+        MathAssingment mathAssingment1 = new MathAssingment("Roberto Rodriguez", "Fractions", "7.3", "8-19");
         Console.WriteLine(mathAssingment1.GetSummary());
         Console.WriteLine(mathAssingment1.GetHomeWorkdList());
 
