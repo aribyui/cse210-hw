@@ -4,8 +4,11 @@ public class WritingAssingment : Assingment
 
     public WritingAssingment(string studentName, string topic, string title) : base(studentName, topic)
     {
-        _studentName = studentName;
-        _topic = topic;
+        /*
+        las variables _studentName y _topic
+        son heredades de la clase padre 'Assingment'
+        por lo cuál, es redundante volver a asignarlas
+        */
         _title = title;
     }
 
@@ -21,6 +24,6 @@ public class WritingAssingment : Assingment
 
     public string GetWritingInfo()
     {
-        return $"{_title} by {_studentName}";
+        return $"{_title} by {GetStudentName()}";
     }
 }
