@@ -8,16 +8,16 @@ class Program
         Console.Clear();
 
         Square square = new Square("Red", 2);
-        Console.WriteLine(square.GetColor());
-        Console.WriteLine(square.GetArea());
+        // Console.WriteLine(square.GetColor());
+        // Console.WriteLine(square.GetArea());
 
         Rectangle rectangle = new Rectangle("Yellow", 2, 8);
-        Console.WriteLine(rectangle.GetColor());
-        Console.WriteLine(rectangle.GetArea());
+        // Console.WriteLine(rectangle.GetColor());
+        // Console.WriteLine(rectangle.GetArea());
 
         Circle circle = new Circle("Blue", 15);
-        Console.WriteLine(circle.GetColor());
-        Console.WriteLine(circle.GetArea());
+        // Console.WriteLine(circle.GetColor());
+        // Console.WriteLine(circle.GetArea());
 
         Console.WriteLine();
 
