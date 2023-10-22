@@ -16,29 +16,46 @@ public class Order
     public void TotalOrderCost()
     {
         double total = 0;
-
+        
         foreach (Product p in _products)
         {
-            total += p.GetProductPrice();  
-        }    
+            total += p.GetProductPrice();
+        }
 
-        if (_customer.DoesTheCustomerLiveInUSA())
+        double shippingCost;
+        
+        if (_customer.LiveInUSA())
         {
-            total += 5;
+            /* 
+            If the customer lives in the USA, 
+            the shipping cost is $5
+            total += shipping cost
+            */
+            shippingCost = 5;
+            total += shippingCost;
         }
         else
         {
-            total += 35;
+            /*
+            If the customer does not live in the USA, 
+            the shipping cost is $35.
+            total += shipping cost
+            */
+            shippingCost = 35;
+            total += shippingCost;
         }
-        
+
         Console.WriteLine($"Total: ${total}");    
     }
 
     public void PackingLabel()
     {
+        int count = 0;
+
         foreach (Product p in _products)
         {
-            p.DisplayNameAndID();
+            count++;
+            p.DisplayNameAndID(count);
         }
     }
     

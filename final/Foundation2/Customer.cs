@@ -24,7 +24,7 @@ public class Customer
         Console.WriteLine(_name);
     }
     
-    public bool DoesTheCustomerLiveInUSA()
+    public bool LiveInUSA()
     {
         return _address.IsInUSA();
     }
