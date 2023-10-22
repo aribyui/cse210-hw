@@ -4,7 +4,7 @@ public class Product
     private string _productId = "0";
     private double _price = 0;
     private int _quantity = 0;
-    
+
     public Product(string productName, string productId, double price, int quantity)
     {
         _productName = productName;
@@ -57,11 +57,6 @@ public class Product
     {
         return _price * _quantity;
     }
-
-    // public void DisplayNameAndID()
-    // {
-    //     Console.WriteLine($"Product: {_productName}\nID: {_productId}");
-    // }
 
     public void DisplayNameAndID(int count)
     {
