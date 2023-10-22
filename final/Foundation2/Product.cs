@@ -4,12 +4,7 @@ public class Product
     private string _productId = "0";
     private double _price = 0;
     private int _quantity = 0;
-
-    public Product()
-    {
-
-    }
-
+    
     public Product(string productName, string productId, double price, int quantity)
     {
         _productName = productName;
